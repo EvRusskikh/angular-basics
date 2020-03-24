@@ -1,12 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
 .posts {
   display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
 }
 
 .post {
   width: 50%;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
 
   &__wrap {
     height: 100%;

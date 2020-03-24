@@ -3,9 +3,10 @@
   <div class="post__block" [ngClass]="{active: imgActive}" [class.border]="imgActive">
     <img [src]="img" alt="" height="225">
   </div>
-  <div class="post__block">
-    <button (click)="updateImg()">CLICK ME!</button>
-  </div>
-  <p [ngStyle]="statusStyle">{{ status }}</p>
+  <button (click)="updateImg()">CLICK ME!</button>
+  <p [ngStyle]="statusStyle" *ngIf="status !== ''; else noStatus">{{ status }}</p>
+  <ng-template #noStatus>
+    <p>status</p>
+  </ng-template>
 </div>
 
