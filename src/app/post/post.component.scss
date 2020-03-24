@@ -1,5 +1,15 @@
-.post {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 1px dashed #ccc;
+img {
+  border: 1px transparent solid;
+}
+
+.active {
+  img {
+    border-color: red;
+  }
+}
+
+.border {
+  img {
+    border-radius: 5px;
+  }
 }

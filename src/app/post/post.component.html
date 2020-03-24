@@ -1,8 +1,11 @@
-<div class="post">
+<div class="post__wrap">
   <h2>{{ title }}</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur cumque deserunt error fuga illo incidunt
-    laudantium optio provident, sapiente.</p>
-  <img [src]="img" alt="" height="225">
-  <p>{{ status }}</p>
+  <div class="post__block" [ngClass]="{active: imgActive}" [class.border]="imgActive">
+    <img [src]="img" alt="" height="225">
+  </div>
+  <div class="post__block">
+    <button (click)="updateImg()">CLICK ME!</button>
+  </div>
+  <p [ngStyle]="statusStyle">{{ status }}</p>
 </div>
 

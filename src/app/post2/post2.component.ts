@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './post2.component.html',
   styleUrls: ['./post2.component.scss']
 })
-export class Post2Component implements OnInit {
+export class Post2Component {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  userName = '';
 
 }
