@@ -28,4 +28,8 @@ export class AppComponent {
       text: 'Текст для Алешки'
     }
   ];
+
+  updatePosts(post: Post) {
+    this.posts.unshift(post);
+  }
 }
