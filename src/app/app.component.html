@@ -1,18 +1,3 @@
 <div class="container">
   <h2>App title</h2>
-  <app-post-form
-    (onAdd)="updatePosts($event)"
-  ></app-post-form>
-  <hr>
-  <app-post
-    *ngFor="let post of posts"
-    [post]="post"
-  >
-    <div #info>
-      <small *ngIf="post.text.length > 10; else short">Long post</small>
-      <ng-template #short>
-        <small>Short post</small>
-      </ng-template>
-    </div>
-  </app-post>
 </div>
