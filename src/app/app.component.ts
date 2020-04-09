@@ -12,4 +12,5 @@ export interface Post {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  e: number = Math.E;
 }
