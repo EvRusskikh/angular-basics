@@ -13,6 +13,8 @@ export interface Post {
 export class AppComponent {
   search = '';
   searchField = 'title';
+  postTitle: string = '';
+  postText: string = '';
 
   posts: Post[] = [
     {title: 'Корабль судьбы', text: 'Совместные чтения с ООК'},
@@ -20,4 +22,10 @@ export class AppComponent {
     {title: 'Братья Карамазовы', text: 'Нужно бы продолжить'},
     {title: 'Жажда жизни', text: 'В планах на апрель'}
   ];
+
+  addPost() {
+    if (this.postTitle.trim() && this.postText.trim()) {
+      this.posts.unshift({title: this.postTitle, text: this.postText});
+    }
+  }
 }

@@ -1,8 +1,14 @@
 <div class="container">
   <h1>Pipes</h1>
 
-  <button class="btn" (click)="searchField = 'title'">Title</button>
-  <button class="btn" (click)="searchField = 'text'">Text</button>
+  <div class="form">
+    <input type="text" [(ngModel)]="postTitle" placeholder="Название...">
+    <input type="text" [(ngModel)]="postText" placeholder="Описание...">
+    <button class="btn" (click)="addPost()">Добавить книжку</button>
+  </div>
+
+  <button class="btn" (click)="searchField = 'title'">По названию</button>
+  <button class="btn" (click)="searchField = 'text'">По описанию</button>
 
   <input type="text" [(ngModel)]="search">
 
