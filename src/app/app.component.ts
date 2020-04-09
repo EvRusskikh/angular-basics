@@ -16,6 +16,7 @@ export class AppComponent {
   str = 'hello world';
   date: Date = new Date();
   price = 42;
+  name: string = 'Евгения';
   obj = {
     a: 1,
     b: {

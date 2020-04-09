@@ -1,6 +1,11 @@
 <div class="container">
   <h1>Pipes</h1>
 
+  <p>{{'Здравствуйте' | userName: name : 'end'}}!</p>
+  <p>{{'С днем рождения' | userName: name : 'start'}}!</p>
+
+  <hr>
+
   <p>{{10 | mult}}</p>
   <p>{{10 | mult:2}}</p>
   <p>{{10 | mult:3}}</p>
