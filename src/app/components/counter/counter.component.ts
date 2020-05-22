@@ -12,4 +12,7 @@ export class CounterComponent implements OnInit {
 
   constructor(private appCounterService: AppCounterService, private localCounterService: LocalCounterService) { }
 
+  ngOnInit(): void {
+  }
+
 }
