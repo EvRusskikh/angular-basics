@@ -1,4 +1,9 @@
 <div class="container">
   <h1>Services</h1>
 
+  <div>
+    <h2>Counter: {{appCounterService.counter}}</h2>
+    <button class="btn" (click)="appCounterService.increase()">+</button>
+    <button class="btn" (click)="appCounterService.decrease()">-</button>
+  </div>
 </div>
