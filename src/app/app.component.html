@@ -1,20 +1,4 @@
 <div class="container">
-  <h1>Pipes</h1>
-
-  <div class="form">
-    <input type="text" [(ngModel)]="postTitle" placeholder="Название...">
-    <input type="text" [(ngModel)]="postText" placeholder="Описание...">
-    <button class="btn" (click)="addPost()">Добавить книжку</button>
-  </div>
-
-  <button class="btn" (click)="searchField = 'title'">По названию</button>
-  <button class="btn" (click)="searchField = 'text'">По описанию</button>
-
-  <input type="text" [(ngModel)]="search">
-
-  <div class="card" *ngFor="let post of posts | filter: search : searchField">
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.text }}</p>
-  </div>
+  <h1>Services</h1>
 
 </div>
