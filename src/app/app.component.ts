@@ -19,8 +19,7 @@ export class AppComponent implements OnInit {
   loading: false;
   todoTitle = '';
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.fetchTodos();
@@ -36,7 +35,6 @@ export class AppComponent implements OnInit {
     };
     this.http.post<Todo>('https://jsonplaceholder.typicode.com/todos', newTodo)
       .subscribe(todo => {
-        console.log('todo:', todo);
         this.todos.push(todo);
         this.todoTitle = '';
       });
@@ -47,9 +45,15 @@ export class AppComponent implements OnInit {
     this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos?_limit=2')
       .pipe(delay(1500))
       .subscribe(todos => {
-        console.log('Response:', todos);
         this.todos = todos;
         this.loading = false;
+      });
+  }
+
+  removeTodo(id: number) {
+    this.http.delete<void>(`https://jsonplaceholder.typicode.com/todos/${id}`)
+      .subscribe(() => {
+        this.todos = this.todos.filter(t => t.id !== id);
       });
   }
 }
