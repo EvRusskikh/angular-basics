@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   todos: Todo[] = [];
   loading: false;
   todoTitle = '';
+  error: '';
 
   constructor(private todosService: TodosService) {}
 
@@ -41,6 +42,8 @@ export class AppComponent implements OnInit {
       .subscribe(todos => {
         this.todos = todos;
         this.loading = false;
+      }, error => {
+        this.error = error.message;
       });
   }
 
@@ -48,6 +51,13 @@ export class AppComponent implements OnInit {
     this.todosService.removeTodo(id)
       .subscribe(() => {
         this.todos = this.todos.filter(t => t.id !== id);
+      });
+  }
+
+  compliteTodo(id: number) {
+    this.todosService.compliteTodo(id)
+      .subscribe(todo => {
+        this.todos.find(t => t.id === todo.id).completed = true;
       });
   }
 }
