@@ -11,7 +11,7 @@ import {Todo, TodosService} from './todos.service';
 export class AppComponent implements OnInit {
 
   todos: Todo[] = [];
-  loading: false;
+  loading = true;
   todoTitle = '';
   error: '';
 
